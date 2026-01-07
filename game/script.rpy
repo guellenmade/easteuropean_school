@@ -3,8 +3,13 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
+define config.menu_include_disabled = True
+
+define _scene_show_hide_transition = Dissolve(0.25)
+
+
 define d = Character("David") # Is the Main character, will be changed to [d]
-define c = Character("Cat-Therian") # Will be changed to luna
+define c = Character("Cat-Therian", color="#ff1493") # Will be changed to luna
 define a = Character("") #change
 define b = Character("") #change
 define e = Character("") #change
@@ -19,7 +24,7 @@ define homeland = False
 # "Hallo [d]" == Hallo sigma
 label start:
     python:
-        d = Character(renpy.input(prompt="Whats your name?", length=41, copypaste=True).lower().title())
+        d = Character(renpy.input(prompt="Whats your name?", length=41, copypaste=True).lower().title(), color="#ffffff")
     
     
     
@@ -45,20 +50,18 @@ label school_place:
         "Hey are you alright?":
             d "Hey are you alright?"
             c "Yea it's all good. Thanks."
-            python:
-                c_like += 5
+            $c_like += 5
         "Are you alright? Can i help you?":
             d "Are you alright? Can i help you?"
             c "No i am fine but thanks for asking."
-            python:
-                c_like += 8
+            $c_like += 8
         "You look good.":
             d "You look good."
             c "Fuck you, i fall and the only thing you think about is: \"Oh she looks fucking hot, im gonna say that now\""
             d "No i Just wanted to say something nice."
             c "Just stop flirting okay?"
-            python:
-                c_like -= 5
+
+            $c_like -= 5
     c "Whats your name tho?"
     d "My name is [d] and yours?"
     
@@ -83,22 +86,21 @@ label school_place:
     d "What is your name now?"
     c "My name is Luna"
     python:
-        c = Character("Luna")
+        c = Character("Luna", color="#ff1493")
     d "Nice to meet you, [c]."
     if c_like < 0:
         menu:
             "Apologize":
                 d "Hey, i wanna say... I am really Sorry what happened before. Can you forgive me?"
                 c "Yea it is alright. I overreacted a lot to be honest."
-                python:
-                    c_like = 2
+                $c_like = 2
 
             "Don't Apologize":
                 d "{i}Why should i even Apologize? She is so arrogant.{/i}"
     jump classroom
 
 label classroom:
-    
+    pause 3
     "We stand in front of a room"
     c "This is our classroom [d]"
     d "Oh, thank you [c]."
@@ -113,19 +115,20 @@ label classroom:
                 
             "No":
                 d "No thanks."
-                python:
-                    c_like -= 2
+
+                $c_like -= 2
                 c "aww come on."
                 menu:
                     "Ok, because it's you.":
                         d "Ok, because it's you."
                         c "Yay thank you"
                         jump classroom_luna
+                        $c_like += 1
                     "I said no.":
                         d "I said no."
                         c "Okay sorry"
                         #block of code to run
-                    
+    pause 2.0                
     "I sit at that one empty Table."
     d "I really need to find some friends. Im gonna join a club later that day."
     jump noluna_school_ending
@@ -133,16 +136,15 @@ label classroom:
 
 label classroom_luna:
     "So i sit next to her."
-    python:
-        c_like += 5 # A maximum of 13 "LunaPoints" are possible rn
+    $c_like += 5 # A maximum of 13 "LunaPoints" are possible rn
     c "And? From where do you come?"
-    d "I come from:"
     menu:
         "I come from...":
-            python:
-                c_like += 3 # A maximum of 16 "LunaPoints" are possible rn
-                #block of code to run
-                homeland = Character(renpy.input(prompt="Whats your Homeland??", length=41, copypaste=True).lower().title())
+            $c_like += 3 # A maximum of 16 "LunaPoints" are possible rn
+            
+            #block of code to run
+            
+            $homeland = Character(renpy.input(prompt="Whats your Homeland??", length=41, copypaste=True).lower().title())
             d "I come from [homeland]"
 
             c "Yooo cool. I was in [homeland] for a week and it's pretty cool."
@@ -151,10 +153,11 @@ label classroom_luna:
         "I don't wanna answer that.":
             d "I don't wanna answer that."
             c "Aww come on."
-            python:
-                c_like -= 1
+            $c_like -= 1
             #block of code to run
-    
+
+
+    pause 4.0
     c "Hey i have a nice idea"
     c "Aehm"
     d "What is it [c]?"
@@ -169,9 +172,11 @@ label classroom_luna:
     c "Okay.. I will See you then."
     d "HEY! I never said i'll join."
     "[c] Smiles"
+    pause 1.0
     c "I know you will."
 
     #later
+    pause 3.0
     "I am standing in front of the Backing Club."
     d "{i}So this is the Backing Club that Luna told me about...{/i}"
     "I open the door and Step in."
