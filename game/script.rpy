@@ -10,9 +10,9 @@ define _scene_show_hide_transition = Dissolve(0.25)
 
 define d = Character("David") # Is the Main character, will be changed to [d]
 define c = Character("Cat-Therian") # Will be changed to luna
-define a = Character("Placeholdergirl1") #change
-define b = Character("Placeholdergirl2") #change
-define e = Character("Placeholdergirl3") #change
+define a = Character("Lukaš") #change
+define b = Character("Aishah") #change
+define e = Character("Camila") #change
 
 
 
@@ -213,25 +213,37 @@ label clubjoin:
     
     "I gasp as i see 3 Beautiful Girls coming and stop next to [c]"
     d "Hi... Hi i am [d]"
-    a "Oh nice to meet you [d].\nWhy did you wanna join the Backing Club?"
+    a "Oh nice to meet you [d].\nI am [a].\nWhy did you wanna join the Backing Club?"
     b "I'm sure he's just a Socially akward Reddit Mod that wants some Female contact."
     e "Shut up [b] we don't even know him yet."
     b "True but i still wanna keep an eye on him."
     "It seems like [b] is a little bit aggressive towards me."
     menu:
         "Do you have a bad past with Reddit mods?":
+            d "Do you have a bad past with Reddit mods?"
             #block of code to run
-        "Shut up nobody cares":
-            $e_like -= 1
-            $a_like -= 1
-            $b_like -= 3
-            $c_like -= 1
+        "Shut up not every man is like that.":
+            d "Shut up not every man is like that."
+            a "True i mean i am a man too"
+            "Wait is [a] a femboy?"
+            b "Hrmp you may be right.\nBut i am still a bit sceptical about you."
 
 
         "Say nothing":
             #block of code to run
             d "..."
-        
+            b "Oh so i am right???"
+            d "No,  i just don't want to start an argument with you."
+            c "Sorry [d].\n[e] is always a bit aggressive towards new people."
+            b "Shut up"
+            d "I'ts allright. Im gonna show her that i am a cool guy."
+            "i Smile"
+    b "Okay you can stay... for now.\nAnd before i forget: I am [b], {b}not nice{/b} to meet you."
+    e "And i am [e], {b}nice{/b} to meet you."
+    a "Like i said: I am [a], and {b}very very nice{/b} to meet you~"
+    b "Why are you guys always that kind?"
+    d "I think your just a bit overreacting."
+    a "True"
 
 
 
