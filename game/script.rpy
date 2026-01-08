@@ -5,10 +5,16 @@
 
 define d = Character("David") # Is the Main character, will be changed to [d]
 define c = Character("Cat-Therian") # Will be changed to luna
-define a = Character("") #change
-define b = Character("") #change
-define e = Character("") #change
+define a = Character("Placeholdergirl1") #change
+define b = Character("Placeholdergirl2") #change
+define e = Character("Placeholdergirl3") #change
+
+
+
+define a_like = int(0)
+define b_like = int(0)
 define c_like = int(0)
+define e_like = int(0)
 # The game starts here.
 define homeland = False
 
@@ -19,7 +25,7 @@ define homeland = False
 # "Hallo [d]" == Hallo sigma
 label start:
     python:
-        d = Character(renpy.input(prompt="Whats your name?", length=41, copypaste=True).lower().title())
+        d = Character(renpy.input(prompt="Whats your name?", length=41, copypaste=True).lower().title()) 
     
     
     
@@ -186,11 +192,11 @@ label classroom_luna:
 label noluna_school_ending:
     "The bell rings."
     d "Wow finally over." 
-    d "{i}I need to join a Club now. \nBut which one?\nWait i have a list.{/i}"
+    d "I need to join a Club now. \nBut which one?\nWait i have a list."
     "i get out a list from my backpack."
     d "{i}Poem-Writing, Gaming, IT, Dancing, Tiktok???\n What the fuck does Tiktok even mean? Are they Dancing or what?\nAnyways... Gym, Backing, Cooking...{/i}"
     d "{b}Backing?{/b}"
-    d "{i}I Love baking I should really join this club.{/i}"
+    "I Love baking I should really join this club."
     # later
     d "{i}Backing Club.{/i}"
     "I knock the door and enter in."
@@ -199,6 +205,28 @@ label noluna_school_ending:
 
 label clubjoin:
     c "Anyways, i go and get the others.\n{b}HEEEEY [a] [b] [e] We may have a new Member!{/b}"
+    
+    "I gasp as i see 3 Beautiful Girls coming and stop next to [c]"
+    d "Hi... Hi i am [d]"
+    a "Oh nice to meet you [d].\nWhy did you wanna join the Backing Club?"
+    b "I'm sure he's just a Socially akward Reddit Mod that wants some Female contact."
+    e "Shut up [b] we don't even know him yet."
+    b "True but i still wanna keep an eye on him."
+    "It seems like [b] is a little bit aggressive towards me."
+    menu:
+        "Do you have a bad past with Reddit mods?":
+            #block of code to run
+        "Shut up nobody cares":
+            $e_like -= 1
+            $a_like -= 1
+            $b_like -= 3
+            $c_like -= 1
+
+
+        "Say nothing":
+            #block of code to run
+            d "..."
+        
 
 
 
