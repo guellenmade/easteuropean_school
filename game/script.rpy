@@ -20,6 +20,7 @@ define a_like = int(0)
 define b_like = int(0)
 define c_like = int(0)
 define e_like = int(0)
+define is_homophobe = False
 # The game starts here.
 define homeland = False
 
@@ -243,7 +244,120 @@ label clubjoin:
     a "Like i said: I am [a], and {b}very very nice{/b} to meet you~"
     b "Why are you guys always that kind?"
     d "I think your just a bit overreacting."
-    a "True"
+    a "Me too.\n You are always sooooo Agressive towards men."
+    b "Shut up you small ass Femboy."
+
+    "Suddenly [a] blushes very hard. And runs to the Kitchen."
+    d "What just happened?"
+    "[c] and [d] went silent and are now staring at [b]"
+    menu:
+        "Look for [a]":
+            jump lookforLukas
+        "Do Nothing":
+            jump nothingdoer
+
+        "Talk with [c]" if c_like > 10:
+            #block of code to run
+            jump talkwithluna
+
+
+
+label lookforLukas:
+    "I run into the kitchen."
+    d "[a]? LUKAAAŠ!!!"
+    a "Wha... What?"
+    "I walk next to the kitchen and see [a] crying in the corner."
+    d "Are... you okay?"
+    a "Yes... i am alright."
+    "Seeing [a] cry kinda makes me sad too.\nSo i decide to sit next to to her."
+    a "Aaah... Hi~"
+    d "I clearly see that you are {b}NOT{/b} okay."
+    a "Okay... can i trust you?"
+    "I nod"
+    d "I... You can trust me."
+    "I see a smile in her face."
+    a "Do you see something... thats different about me?\nLike... my voice?"
+    d "No"
+    a "My look?"
+    d "No\nWhat do you wanna say?"
+    a "I am... Nnngh...\nI am a femboy."
+    d "Wha WHAT?"
+    "Thats why {b}she{/b} is named [a]"
+    a "Oh... You hate me now right?"
+    menu:
+        "I don't really like LGBTQ+ but i don't hate you because of that.":
+            #block usw
+            d "I have to say, that i don't really like the LGBTQ+ Community but i don't hate you because of that."
+            a "Thanks.\nThat sounds really nice from you."
+            d "It's just... i don't like the idea of being Trans or Gay.\nBut you do you.\nAnd i don't hate you because youre gay or so."
+            a "That... Sounds like a valid compromise."
+            d "Yeah."
+            "[a] is clearly relieved."
+            $ a = Character("Luki")
+            a "You can call me [a]"
+            d "Okay.\nLets go back to the others."
+            a "Okay~"
+
+        "I don't care":
+            d "I don't care what you are, as long as you are a cool person."
+
+
+
+
+        "You are too cute to hate":
+            d "You are too cute to hate."
+            a "Wha... What?"
+            "[a] is really red right now"
+            #block of code to run
+
+
+
+
+
+        "Oh my fucking god.\nYou are a such an ugly faggot.":
+            $a_like = -10000000
+            $is_homophobe = True
+            d "Oh my fucking god.\nYou are a such an ugly faggot."
+            a "Wha... What?"
+            "[a] Starts to cry again."
+            d "Yeah go fucking crying you little faggot.\nGo Kill yourself."
+            "[a] Is still crying.\nBut that little bitch deserved it."
+            "I walk back to the others."
+            d "I \"Talked\" to {b}him{/b}."
+            jump nothingdoer
+
+        
+
+
+
+
+label talkwithluna:
+
+
+
+
+
+label nothingdoer:
+    d "It's probably nothing."
+    b "Yes, [a] is a typical man."
+    c "Please stop it [b]"
+    d "I think [a] is overreacting a bit."
+    b "Wait your not that big of an asshole. [d]"
+    d "Thanks i guess?"
+
+    
+    $ b_like += 4 #maximum 4 points for b
+    if is_homophobe == True:
+        pause 3.2
+        "[b] walks towards me"
+        b "{i}You...harassed him... right?{/i}"
+        d "{i}Yes.{/i}"
+        "[b] smiles"
+        b "Good Job. You are getting more symphatic every second.~"
+        "I kinda have a crush on [b] now."
+        d "I loved doing it."
+        $ b_like += 12 #maximum of 16 Points for B
+
 
 
 
