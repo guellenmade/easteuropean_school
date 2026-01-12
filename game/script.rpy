@@ -9,7 +9,7 @@ define _scene_show_hide_transition = Dissolve(0.25)
 
 
 define d = Character("David") # Is the Main character, will be changed to [d]
-define c = Character("Cat-Therian") # Will be changed to luna
+define c = Character("Girl") # Will be changed to luna
 define a = Character("Lukaš") #change
 define b = Character("Aishah") #change
 define e = Character("Camila") #change
@@ -21,8 +21,9 @@ define b_like = int(0)
 define c_like = int(0)
 define e_like = int(0)
 define is_homophobe = False
-# The game starts here.
 define homeland = False
+
+# The game starts here.
 
 
 
@@ -45,9 +46,7 @@ label start:
 
 label school_place:
     "I walked to my new School."
-    "I see a Girl walking in front of me. But..."
-    d "{i}SHE HAS CAT EARS???{/i}"
-    d "{i}Okay maybe she is a Therian or so?{/i}"
+    "I see a Girl running in front of me. But why is she running?"
 
     "The girl trips over a stone."
     c "Ouch, Fuck this shit. FUCK!"
@@ -64,7 +63,7 @@ label school_place:
             $c_like += 8
         "You look good.":
             d "You look good."
-            c "Fuck you, i fall and the only thing you think about is: \"Oh she looks fucking hot, im gonna say that now\""
+            c "Fuck you, i just fell and the only thing you think about is: \"Oh she looks fucking hot, im gonna say that now\""
             d "No i Just wanted to say something nice."
             c "Just stop flirting okay?"
 
@@ -191,7 +190,7 @@ label classroom_luna:
     d "How would you know that? We only know each other for two hours or so."
     c "You know... You give me that \"Chill nice guy\" Vibe."
     "I smile"
-    d "{i}I think she likes me... Will i get my first Girlfriend... In this school?{/i}"
+    "I think she likes me... Will i get my first Girlfriend... In this school?"
     jump clubjoin
 
 
@@ -200,9 +199,9 @@ label noluna_school_ending:
     d "Wow finally over." 
     d "I need to join a Club now. \nBut which one?\nWait i have a list."
     "i get out a list from my backpack."
-    d "{i}Poem-Writing, Gaming, IT, Dancing, Tiktok???\n What the fuck does Tiktok even mean? Are they Dancing or what?\nAnyways... Gym, Backing, Cooking...{/i}"
+    "Poem-Writing, Gaming, IT, Dancing, Tiktok???\n What the fuck does Tiktok even mean? Are they Dancing or what?\nAnyways... Gym, Backing, Cooking..."
     d "{b}Backing?{/b}"
-    "I Love baking I should really join this club."
+    "I Love baking... so i should really join this club."
     # later
     d "{i}Backing Club.{/i}"
     "I knock the door and enter in."
@@ -223,12 +222,17 @@ label clubjoin:
         "Do you have a bad past with Reddit mods?":
             d "Do you have a bad past with Reddit mods?"
             #block of code to run
+            b "Yes... I mean no...\nFuck it. I just {b}know{/b} it."
+            d "Yes sure..."
+            "I'm smiling because she has no arguments."
+            b "I swear i beat you up if you laugh one more time like that!"
+            $ b_like -= 2
         "Shut up not every man is like that.":
             d "Shut up not every man is like that."
-            a "True i mean i am a man too"
-            "Wait is [a] a femboy?"
-            b "Hrmp you may be right.\nBut i am still a bit sceptical about you."
-
+            b "In my opinion they are"
+            d "And how do you know that?"
+            b "Aehm... \nI have my sources"
+            $ b_like -= 3
 
         "Say nothing":
             #block of code to run
@@ -239,7 +243,8 @@ label clubjoin:
             b "Shut up"
             d "I'ts allright. Im gonna show her that i am a cool guy."
             "i Smile"
-    b "Okay you can stay... for now.\nAnd before i forget: I am [b], {b}not nice{/b} to meet you."
+
+    b "Okay you can stay... for now.\nAnd before i forget: I am [b], {b}not{/b} nice to meet you."
     e "And i am [e], {b}nice{/b} to meet you."
     a "Like i said: I am [a], and {b}very very nice{/b} to meet you~"
     b "Why are you guys always that kind?"
@@ -332,6 +337,25 @@ label lookforLukas:
 
 
 label talkwithluna:
+    d "Hey [c] we need to talk."
+    c "N...Now?"
+    "[c] is clearly blushing right now."
+    d "Yes"
+    c "Oh...Okay."
+    "We walk outside the room."
+    d "Okay... please explain me..."
+    c "Oh... okay...\nAs you may have noticed i have cat ears..."
+    "I look at her head and..."
+    d "HOLY SHIT??? WHY DO YOU HAVE CAT-EARS???"
+    c "I am a therian...\nI hope you don't hate me because of that."
+    d "No no no... it's all okay."
+    c "Thank you.\nYou are one of the calmest person i have ever met."
+    c "Anyways... [a] is a femboy.\nHe is gay too."
+    d "Okay... i don't really mind that."
+    c "Let's get back to the others, before they think we are dating."
+    d "Sure"
+    $ c_like += 10 #maximum of 26 "lunapoints"
+
 
 
 
