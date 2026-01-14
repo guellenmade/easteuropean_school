@@ -8,7 +8,7 @@ define config.menu_include_disabled = True
 define _scene_show_hide_transition = Dissolve(0.25)
 
 
-define d = Character("David") # Is the Main character, will be changed to [d]
+define d = Character("David") # Is the Main character, will be changed to Whatever the user says
 define c = Character("Girl") # Will be changed to luna
 define a = Character("Lukaš") #change
 define b = Character("Aishah") #change
@@ -291,10 +291,11 @@ label lookforLukas:
     a "Oh... You hate me now right?"
     menu:
         "I don't really like LGBTQ+ but i don't hate you because of that.":
+            $a_like += 5
             #block usw
             d "I have to say, that i don't really like the LGBTQ+ Community but i don't hate you because of that."
             a "Thanks.\nThat sounds really nice from you."
-            d "It's just... i don't like the idea of being Trans or Gay.\nBut you do you.\nAnd i don't hate you because youre gay or so."
+            d "It's just... i don't like the idea of being Trans or Gay.\nBut you do you.\nAnd i don't hate you because you're gay or so."
             a "That... Sounds like a valid compromise."
             d "Yeah."
             "[a] is clearly relieved."
@@ -304,15 +305,50 @@ label lookforLukas:
             a "Okay~"
 
         "I don't care":
+            $a_like += 12
             d "I don't care what you are, as long as you are a cool person."
+            a "Ohm... Thanks i guess?"
+            a "Let's go back to the others... right?"
+            d "Okay"
 
 
 
 
         "You are too cute to hate":
             d "You are too cute to hate."
+            $a_like += 67 # Maximum of 67 points 
             a "Wha... What?"
             "[a] is really red right now"
+            d "Yes i am real right now."
+            a "Sto...Stop it."
+            d "Your red cheeks make you even cuter."
+            a "..."
+            d "And i can't hate you, as long as you keep looking at me like that.\nNo matter what you are or what you will do..."
+            a "Nnngh..."
+            d "And you did a very good Job.\nYou are the cutest \"Woman\" that ever existed."
+            a "Ahhh..."
+            "I've never seen such a cute guy... \nI really wanna kiss him right now..."
+            d "Is everything okay?"
+            a "I... We..."
+            "He is so cute."
+            a "Thanks for the compliments."
+            "[a] Runs out of the Kitchen"
+            pause 2.5
+            c "[d]!!!"
+            d "Wha...What?"
+            "I also run towards the main room."
+            d "What happened?"
+            c "[a] ran out of the kitchen and i wanna ask you why.\nWhat have you done???"
+            d "I... I just complimented him."
+            c "You know... It doesn't look like this."
+            "She's right.\nIt really doesn't look like that."
+            d "Yes but...\nPlease believe me."
+            "[c] looks like she's thinking about executing me."
+            d "I did nothing wrong... Believe me."
+            c "Okay. I will ask him tomorrow, and if he doesn't defend you... \nYou are in big trouble."
+            d "Oh... Okay"
+            "I really hope [a] won't be mad on me."
+
             #block of code to run
 
 
@@ -347,14 +383,35 @@ label talkwithluna:
     c "Oh... okay...\nAs you may have noticed i have cat ears..."
     "I look at her head and..."
     d "HOLY SHIT??? WHY DO YOU HAVE CAT-EARS???"
+    c "You didn't notice yet???"
+    "I am shoked."
+    d "Yes..."
+    c "Okay... You're pretty slow."
+    d "But why? Aren't cat-girls just a invention of Gooners?"
+    c "Oh my god.\nThese aren't real of course."
     c "I am a therian...\nI hope you don't hate me because of that."
+    menu:
+        "What's that?":
+            c "Okay, i try to explain.\nA therian is basically a person that feels connected to an animal.\nFor example i kinda feel like i am a cat."
+            c "It's not about acting like a cat, it's about my inner identity.\nAnd i sometimes wanna make cat sounds, even tho i am a \"Girl\"."
+            
+            d "Okay?"
+
+        "Oh a therian...":
+            d "Oh... a therian."
+    
+    
+    c "Does this mean something bad?"       
     d "No no no... it's all okay."
     c "Thank you.\nYou are one of the calmest person i have ever met."
     c "Anyways... [a] is a femboy.\nHe is gay too."
-    d "Okay... i don't really mind that."
-    c "Let's get back to the others, before they think we are dating."
+    d "Okay... i also don't really mind that."
+    c "Okay, that's good.\nLet's get back to the others, before they think we are dating or so."
+    "Why do i feel like that would unironically be the best thing to happen?"
     d "Sure"
+    
     $ c_like += 10 #maximum of 26 "lunapoints"
+    jump nothingdoer
 
 
 
@@ -381,6 +438,16 @@ label nothingdoer:
         "I kinda have a crush on [b] now."
         d "I loved doing it."
         $ b_like += 12 #maximum of 16 Points for B
+    e "Anyways it's already late...\n Let's go home."
+    c "You're right."
+    b "Bye guys."
+
+
+
+
+
+label firstday:
+    pass
 
 
 
