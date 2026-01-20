@@ -31,21 +31,29 @@ define homeland = False
 # wenn d = "sigma"
 # "Hallo [d]" == Hallo sigma
 label start:
+    scene bg start
     python:
         d = Character(renpy.input(prompt="Whats your name?", length=41, copypaste=True).lower().title()) 
     
-    
+    scene bg home room
     
     "Alarm clock" "{i}Beep, Beep, Beep{/i}"
     d "Shut up"
     "I turn of the alarm and get ready for School"
     "Today is my first day."
-    "I dress up and go down to the kitchen"
+    "I dress up and go down to the kitchen."
+    scene bg home kitchen
     d "{i}Why are my Parents always working?{/i}"
+    "I make myself a nice piece of bread with some strawberry jam."
+    d "This shit is so delicious."
     "I take my backpack and get out the House."
 
 label school_place:
-    "I walked to my new School."
+    scene bg street
+    "I start walking to my new School."
+    pause 1.5
+    scene bg school front
+    pause 0.5
     "I see a Girl running in front of me. But why is she running?"
 
     "The girl trips over a stone."
@@ -197,7 +205,9 @@ label classroom_luna:
 label noluna_school_ending:
     "The bell rings."
     d "Wow finally over." 
-    d "I need to join a Club now. \nBut which one?\nWait i have a list."
+    "I need to join a Club now."
+    "But which one?"
+    "Wait i have a list."
     "i get out a list from my backpack."
     "Poem-Writing, Gaming, IT, Dancing, Tiktok???\n What the fuck does Tiktok even mean? Are they Dancing or what?\nAnyways... Gym, Backing, Cooking..."
     d "{b}Backing?{/b}"
@@ -303,6 +313,7 @@ label lookforLukas:
             a "You can call me [a]"
             d "Okay.\nLets go back to the others."
             a "Okay~"
+            jump lukigood
 
         "I don't care":
             $a_like += 12
@@ -310,7 +321,7 @@ label lookforLukas:
             a "Ohm... Thanks i guess?"
             a "Let's go back to the others... right?"
             d "Okay"
-
+            jump lukigood
 
 
 
@@ -348,6 +359,7 @@ label lookforLukas:
             c "Okay. I will ask him tomorrow, and if he doesn't defend you... \nYou are in big trouble."
             d "Oh... Okay"
             "I really hope [a] won't be mad on me."
+            jump firstday
 
             #block of code to run
 
@@ -395,7 +407,7 @@ label talkwithluna:
             c "Okay, i try to explain.\nA therian is basically a person that feels connected to an animal.\nFor example i kinda feel like i am a cat."
             c "It's not about acting like a cat, it's about my inner identity.\nAnd i sometimes wanna make cat sounds, even tho i am a \"Girl\"."
             
-            d "Okay?"
+            d "Oh... a therian?"
 
         "Oh a therian...":
             d "Oh... a therian."
@@ -441,13 +453,35 @@ label nothingdoer:
     e "Anyways it's already late...\n Let's go home."
     c "You're right."
     b "Bye guys."
+    d "Bye"
+    jump firstday
 
 
+
+
+label lukigood:
+    "So we go back to the others."
+    a "Hi guys...\nI am fine"
+    c "You didn't seem like it tho."
+    d "It's all good.\nI talked with him."
+    e "So it is all okay now?"
+    a "Yes."
+    b "Can we go home now?"
+    c "Good idea...\nIt's already 6 o'clock"
+    d "Okay...\nBye guys."
+    a "Bye~"
+    b "Until tomorrow guys."
+    jump firstday
 
 
 
 label firstday:
-    pass
+    "As i walk home, i try to remember what happened today.\nAnd how i will \"survive\" this club."
+    "Those beautiful girls are way too much for me..."
+    "[c]"
+    "[a]"
+    "[b]"
+    "[e]"
 
 
 
