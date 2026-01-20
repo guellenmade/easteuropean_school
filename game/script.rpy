@@ -479,6 +479,7 @@ label firstday:
     "As i walk home, i try to remember what happened today.\nAnd how i will \"survive\" this club."
     "Those beautiful girls are way too much for me..."
     "[c]"
+
     "[a]"
     "[b]"
     "[e]"
