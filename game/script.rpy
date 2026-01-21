@@ -33,7 +33,7 @@ define homeland = False
 label start:
     scene bg start
     python:
-        d = Character(renpy.input(prompt="Whats your name?", length=41, copypaste=True).lower().title()) 
+        d = Character(renpy.input(prompt="Whats your name?", length=41, copypaste=True, default="David").lower().title()) 
     
     scene bg home room
     
@@ -54,7 +54,8 @@ label school_place:
     pause 1.5
     scene bg school front
     pause 0.5
-    "I see a Girl running in front of me. But why is she running?"
+    "I see a Girl running in front of me."
+    "But why is she running?"
 
     "The girl trips over a stone."
     c "Ouch, Fuck this shit. FUCK!"
@@ -209,7 +210,7 @@ label noluna_school_ending:
     "But which one?"
     "Wait i have a list."
     "i get out a list from my backpack."
-    "Poem-Writing, Gaming, IT, Dancing, Tiktok???\n What the fuck does Tiktok even mean? Are they Dancing or what?\nAnyways... Gym, Backing, Cooking..."
+    "Poem-Writing, Gaming, IT, Dancing, Tiktok???\nWhat the fuck does Tiktok even mean? Are they Dancing or what?\nAnyways... Gym, Backing, Cooking..."
     d "{b}Backing?{/b}"
     "I Love baking... so i should really join this club."
     # later
@@ -479,10 +480,28 @@ label firstday:
     "As i walk home, i try to remember what happened today.\nAnd how i will \"survive\" this club."
     "Those beautiful girls are way too much for me..."
     "[c]"
-
     "[a]"
     "[b]"
     "[e]"
+    "This is so unfair."
+    "{b}WHY AM I THAT UGLY?!?{/b}"
+    d "I hate my life"
+    scene black
+    with dissolve
+    pause 1.0
+    scene bg room
+    "I wake up again."
+    "I dress up and go down to the kitchen."
+    scene bg home kitchen
+    "I make myself a nice piece of bread with some strawberry jam."
+    d "This shit is so delicious."
+    "I take my backpack and get out the House."
+    "Wait... Why does this feel like a Déjà-vu?"
+    scene bg street
+    "I start walking to School."
+    pause 1.5
+    scene bg school front
+    pause 0.5
 
 
 
