@@ -37,7 +37,7 @@ This game is a tiny bit inspired by doki doki. Check them out at <a href="https:
 
 
 # The "Team":
-## Guellenmade
+## [Guellenmade](https://github.com/guellenmade)
 #### Contact me (You can also click some QR-Codes):
 <a href="https://smp18.simplex.im/a#AjlydshbsNLxS9IniMBI-s4hyhzoqzjnX9_jGInC_b8"><img src="./img/simplex.png" height=240></a>
 <br>
@@ -45,7 +45,7 @@ This game is a tiny bit inspired by doki doki. Check them out at <a href="https:
 <br>
 <br>
 
-- <a href="https://matrix.to/#/@guellenmade:matrix.org">matrix</a>
+- [Matrix](https://matrix.to/#/@guellenmade:matrix.org)
 - Monero adress: 
 <br>
 "8AuhsU8eCY4XEWBGkNWFj63Kkqrt75yHFYmMvL1fGkDfUuaueBNi2kFgUfqn3Uz1NWRad2Z8sqire8HBKzY5DwWm6ScjFhr"
@@ -54,3 +54,12 @@ This game is a tiny bit inspired by doki doki. Check them out at <a href="https:
 
 <br>
 <a href="https://signal.me/#eu/vWdGDVwKmiYNZkJgJNdVwmc3_KpESXdeNWHQjNlfSy8tOme0y0FCQoO52KJxkAzB"> <img src="./img/signal.png" height="240"></a>
+
+<br>
+<br>
+<br>
+
+
+## [KykYt](https://github.com/1q1kyk)
+- Discord: @xxxxxxxx5900
+

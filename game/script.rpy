@@ -33,10 +33,10 @@ define homeland = False
 label start:
     scene bg start
     python:
-        d = Character(renpy.input(prompt="Whats your name?", length=41, copypaste=True, default="David").lower().title()) 
-    
+        d = Character(renpy.input(prompt="Whats your name?", length=41, copypaste=True, default="Давид").lower().title()) 
+
     scene bg home room
-    
+
     "Alarm clock" "{i}Beep, Beep, Beep{/i}"
     d "Shut up"
     "I turn of the alarm and get ready for School"
@@ -200,6 +200,7 @@ label classroom_luna:
     c "You know... You give me that \"Chill nice guy\" Vibe."
     "I smile"
     "I think she likes me... Will i get my first Girlfriend... In this school?"
+    "Okay maybe she is just a kind Person"
     jump clubjoin
 
 
@@ -260,7 +261,7 @@ label clubjoin:
     a "Like i said: I am [a], and {b}very very nice{/b} to meet you~"
     b "Why are you guys always that kind?"
     d "I think your just a bit overreacting."
-    a "Me too.\n You are always sooooo Agressive towards men."
+    a "Me too.\nYou are always sooooo Agressive towards men."
     b "Shut up you small ass Femboy."
 
     "Suddenly [a] blushes very hard. And runs to the Kitchen."
@@ -451,7 +452,7 @@ label nothingdoer:
         "I kinda have a crush on [b] now."
         d "I loved doing it."
         $ b_like += 12 #maximum of 16 Points for B
-    e "Anyways it's already late...\n Let's go home."
+    e "Anyways it's already late...\nLet's go home."
     c "You're right."
     b "Bye guys."
     d "Bye"
