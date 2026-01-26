@@ -569,13 +569,79 @@ label firstday:
 
                 #block of code to run
             "Say nothing.":
+                c "Anyways im gonna go again now."
+                d "Oh okay... sure..."
                 jump firstdaynoon
     jump firstdaynoon
             
     
 label firstdaynoon:
+    pause 2.0
     "I walk into the clubroom."
+    d "Hi guys"
+    a "Hiiiii [d]!!!"
+    b "Morning"
+    e "Hi [d]."
+    "I look around."
+    d "Where is [c]?"
+    "[a] + [b]" "[c]?"
+    e "I also haven't seen [c] yet.\nMaybe she overslept?"
+    d "She literally just stood in front of me."
+    "[a] + [b] + [e]" "WHAT???"
+    d "Are you messing around with me?"
+    "[a] + [b] + [e]" "NO!"
+    a "You are messing with us right?"
+    d "Fuck no.\nWe need to find her!"
+    "I run into the Kitchen and search for [c]"
+    d "LUNAAA!!!\nWHERE ARE YOU?!?"
+    a "LUNAAA!!!"
+    d "Holy Fuck where is she?"
+    "I look around..."
+    scene bg club dead_luna
+    #she lies dead on the floor
+    d "LUNA!!!"
+    "I also see [a]. He looks really shocked and sad."
+    d "HOLY FUCK!"
+    with zoomin
+    scene bg club dead_luna close
+    pause 2.0
+    d "Holy... fuck..."
+    scene black
+    #play breathing sound
+    pause 2.0
+    # Here the game gets dark
+    # Play audio from Police sound
+    scene bg school front police
+    "Holy fuck"
+    "What happened???"
+    "Who killed [c]?"
+    "Police officer" "Are you alright?"
+    d "Yes... thanks for asking..."
+    "Police officer" "We will contact you, as soon as we know what happened."
+    d "Thank you..."
+    "I look around and see [a] crying."
+    menu:
+        "What now?"
+        "Comfort him" if is_homophobe == False:
+            "I walk towards [a] who is crying."
+            a "Fuck... Nobody understands me now..."
+            "I sit next to him and put a hand over his shoulder."
+            d "Are you... alright?"
+            a "NO!"
+            a "You know as a femboy i was always the outsider, the looser, an asshole.\nUntil [c] came... Suddenly we were two loosers. We understood each other."
+            d "So now you are alone?"
+            a "Yes. I don't have any Friends now.\nI only have enemies like for example [b]."
+            d "You forgot me.\nI could be your friend... {i}Or maybe more.{/i}"
+            a "Yeah friend sounds great... Thanks [d] for being there... for me."
 
+
+
+
+            #block of code to run
+        "Do Nothing":
+            #block of code to run
+            return
+        
 
 
 
