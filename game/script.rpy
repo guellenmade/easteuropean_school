@@ -503,7 +503,78 @@ label firstday:
     pause 1.5
     scene bg school front
     pause 0.5
+    "Another morning passes"
 
+    #the scene switches to the club room
+    if c_like > 4:
+        c "Oh hiii [d]"
+        d "Good morning [c]"
+        c "What?\nIt's already 13 o'clock..."
+        d "Haha i always say good morning"
+        # C is smiling.
+        c "Typical [d]"
+        menu:
+            "Ask her out":
+                d "Do you have time this afternoon?"
+                c "Yes.\nWhy do you ask?"
+                menu:
+                    "Ask her for a date":
+                        d "Do you wanna come on a...\nDate with me?"
+                        "[c] stops smiling and looks directly into my eyes."
+                        if c_like > 15:
+                            c "Are... Are you sure?"
+                            d "Yes.\nYou seem very nice and i kinda have a crush on you."
+                            c "I would love to go on a date with you... [d]"
+                            d "Really?"
+                            "[c] runs to me and wraps her arms around my waist."
+                            c "I love you... everytime i think about you..."
+                            c "I... I... I..."
+                            # here c starts getting weird.
+                            c "I always cut myself until i pass out."
+                            d "Wha...What?"
+                            c "And i will cut myself before we go on this date too...\nHihi"
+                            # c gets normal again.
+                            c "That will be a lot of fun."
+                            d "Okay..."
+                            "I kinda don't believe this.\nShe clearly makes a joke... Right?"
+                            c "See you later."
+                            "[c] walks back into the clubroom."
+                            jump firstdaynoon
+                        if c_like < 15:
+                            # c turns weird
+                            c "NO NEVER!"
+                            d "Sorry..."
+                            c "FUCK YOU!"
+                            "[c] walks back into the clubroom."
+                            "Holy fuck... she is really pissed..."
+                            jump firstdaynoon
+
+
+
+
+                    "Go to the Ice Truck with her":
+                        d "Do you want to go to the Ice Truck with me?"
+                        c "After school?"
+                        d "Yes"
+                        c "Nice idea... i pay for myself tho."
+                        d "No, I would pay for you."
+                        c "No it's alright.\nI am not broke."
+                        d "Haha fine... let's meet at 16 o'clock in front of the main entrance."
+                        c "Good idea"
+                        "[c] walks back into the clubroom."
+                        jump firstdaynoon
+
+                        #block of code to run
+                    
+
+                #block of code to run
+            "Say nothing.":
+                jump firstdaynoon
+    jump firstdaynoon
+            
+    
+label firstdaynoon:
+    "I walk into the clubroom."
 
 
 

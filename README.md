@@ -11,10 +11,10 @@ Its in very very early developement and i really appreciate ideas or even Pull r
 
 I am very shitty in drawing so there are NO real images right now, there are currently only placeholders. But real pictures will hopefully come soon...
 
-<br><br><br>
+<br>
 
 This game is a tiny bit inspired by doki doki. Check them out at <a href="https://ddlc.moe/">Doki Doki</a>
-<br><br><br><br><br>
+<br><br><br>
 
 
 
@@ -33,33 +33,29 @@ This game is a tiny bit inspired by doki doki. Check them out at <a href="https:
 - Ukrainian Voiceover 🏗️
 
 
-<br><br><br><br><br><br><br><br><br>
+<br><br><br><br>
 
 
 # The "Team":
 ## [Guellenmade](https://github.com/guellenmade)
-#### Contact me (You can also click some QR-Codes):
-<a href="https://smp18.simplex.im/a#AjlydshbsNLxS9IniMBI-s4hyhzoqzjnX9_jGInC_b8"><img src="./img/simplex.png" height=240></a>
-<br>
-    <a href="https://t.me/schweizermade"><img src=./img/telegram.png height=240></a>
+#### Contact me (You can also click on the QR-Codes):
+<a href="https://smp18.simplex.im/a#AjlydshbsNLxS9IniMBI-s4hyhzoqzjnX9_jGInC_b8"><img src="./img/simplex_guellenmade.png" height=240></a>
+<a href="https://t.me/schweizermade"><img src=./img/telegram_guellenmade.png height=240></a>
+<a href="https://signal.me/#eu/vWdGDVwKmiYNZkJgJNdVwmc3_KpESXdeNWHQjNlfSy8tOme0y0FCQoO52KJxkAzB"> <img src="./img/signal_guellenmade.png" height="240"></a>
+- [Matrix](https://matrix.to/#/@guellenmade:matrix.org)
 <br>
 <br>
 
-- [Matrix](https://matrix.to/#/@guellenmade:matrix.org)
+#### Donations:
 - Monero adress: 
 <br>
 "8AuhsU8eCY4XEWBGkNWFj63Kkqrt75yHFYmMvL1fGkDfUuaueBNi2kFgUfqn3Uz1NWRad2Z8sqire8HBKzY5DwWm6ScjFhr"
 
-<img src="./img/monero.png">
 
-<br>
-<a href="https://signal.me/#eu/vWdGDVwKmiYNZkJgJNdVwmc3_KpESXdeNWHQjNlfSy8tOme0y0FCQoO52KJxkAzB"> <img src="./img/signal.png" height="240"></a>
-
-<br>
-<br>
 <br>
 
 
 ## [KykYt](https://github.com/1q1kyk)
+#### Contact me:
 - Discord: @xxxxxxxx5900
 
