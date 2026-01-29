@@ -633,18 +633,95 @@ label firstdaynoon:
             a "Yes. I don't have any Friends now.\nI only have enemies like for example [b]."
             d "You forgot me.\nI could be your friend... {i}Or maybe more.{/i}"
             a "Yeah friend sounds great... Thanks [d] for being there... for me."
+            d "I won't leave you."
+            "I clearly see a relieved look in [a]'s eyes.\nHe looks like a cute little Puppy."
+            a "Thanks, [d]"
+            $ a_like += 10 # maximum of 77 points
+            d "If you ever need something, please let me know"
+            a "Thank you so much, you are a real friend."
+            pause 3.0
 
+            a "I need to go home now"
+            menu:
+                "accompany him" if a_like > 20 :
+                    jump walkwithluki
+
+
+
+
+
+
+
+                "also go home":
+                    d "Oh, i need to go too."
+                    a "Okay... Good night [d]."
+                    d "Good night [a]."
+                    "We both go on a different way and head home."
+
+
+                    jump secondday
+                
 
 
 
             #block of code to run
         "Do Nothing":
+            "Hm maybe it's better if i let him alone."
+            "I get my backpack and head home."
+            jump secondday
             #block of code to run
-            return
         
 
+label walkwithluki:
+    d "I come with you"
+    a "You.. you would?"
+    d "Sure, the worst that could happen to you now is, if i would leave you alone now."
+    a "Nnnghn..."
+    pause 1.0
+    a "Yes, please come with me [d].\nI feel so shit right now..."
+    "He looks into my eyes."
+    d "What... Are you okay?"
+    "I suddenly feel my hand getting warm."
+    a "Please hold my hand [d].\nI feel so alone and need... Like an anchor."
+    "How can i NOT hold his hand if he looks at me like he wants to kill himself."
+    d "Sure, if it makes you feel better."
+    a "Tha... Thanks [d] you don't know what this means to me."
+    "I clearly don't know."
+    d "Let's go then... right?"
+    a "Ah... yes."
+    
+    #scenes will change between the pauses
+
+    pause 2.0
+    d "Do you always walk to school?"
+    a "Yes. My parents..."
+    a "NO!"
+    d "Are... are you okay?"
+    a "Yes... I normally go with my bike but it got stolen."
+    d "Oh shit..."
+    a "It was my fault... i haven't locked it."
 
 
+    pause 2.0
+
+
+    a "We are there... and like always, my {b}PARENTS{/b} arent here."
+    "Okay i may shouldn't ask about his parents."
+
+
+
+    
+
+
+
+
+
+
+
+
+
+label secondday:
+    return
 
 
 return
